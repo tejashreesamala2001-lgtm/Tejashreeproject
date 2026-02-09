@@ -1,0 +1,17 @@
+name: Tejashree Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Show Python Version
+        run: python --version
+
+      - name: Run Python File
+        run: python main.py
